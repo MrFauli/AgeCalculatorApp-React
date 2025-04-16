@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+}
+.date_wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 16px;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.date_wrapper .input_wrapper {
+  width: 80px;
+}
+.date_wrapper Input {
+  font-weight: 800;
+  height: 48px;
+  padding-left: 8px;
+  border-radius: 8px;
+  border-color: grey;
+  width: 100%;
+  font-size: 20px;
+  height: 48px;
+  padding-left: 8px;
+  border-radius: 8px;
+}
+
+.backgroundIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  background-color: hsl(259, 100%, 65%);
+  width: 70px;
+  height: 70px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 70px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border: 0px;
+}
+.backgroundIcon img {
+  width: 32px;
+}
+.submit_btn {
+  position: relative;
+  margin-top: 56px;
+}
+h4 {
+  display: flex;
+  opacity: 0.6;
+  font-size: medium;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  margin: 2px;
+  align-self: flex-start;
+  justify-content: flex-start;
+}
+.boxError {
+  color: #ff0000;
+  font-style: italic;
+  font-size: xx-small;
+  margin-top: 2px;
+  line-height: 100%;
+  height: 9px;
+}
+hr {
+  margin: 56px 0;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  .date_wrapper .input_wrapper {
+    width: 120px;
+  }
+  .date_wrapper Input {
+    width: 100%;
+    font-size: 32px;
+    height: 64px;
+    padding-left: 8px;
+    border-radius: 8px;
+  }
+  .date_wrapper {
+    width: 100%;
+    gap: 16px;
+  }
+  .backgroundIcon {
+    top: 50%;
+    left: 50%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .date_wrapper .input_wrapper {
+    width: 160px;
+  }
+  .date_wrapper Input {
+    width: 100%;
+    font-size: 40px;
+    height: 80px;
+    padding-left: 8px;
+    border-radius: 8px;
+  }
+  .date_wrapper {
+    width: 80%;
+    gap: 16px;
+  }
+  .submit_btn {
+    width: 90%;
+  }
+  .backgroundIcon {
+    top: 50%;
+    left: 100%;
+    &:active {
+      background-color: black;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.outputLine {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: baseline;
+
+  font-size: 32px;
+}
+.outputLine h3 {
+  color: Black;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-style: italic;
+}
+
+.outputText {
+  color: hsl(259, 100%, 65%);
+  font-size: 56px;
+  font-weight: 900;
+}
+@media only screen and (max-width: 480px) {
+  .outputLine h3 {
+    font-size: 48px;
+  }
+  .outputText {
+    font-size: 56px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  .outputLine h3 {
+    font-size: 56px;
+  }
+  .outputText {
+    font-size: 64px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .outputLine h3 {
+    font-size: 72px;
+  }
+  .outputText {
+    font-size: 80px;
+  }
+}
