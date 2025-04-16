@@ -53,6 +53,12 @@ const Date_wrapper = ({ onRemove }: Props) => {
     setErrorDD(0);
     setErrorMM(0);
     setErrorYYYY(0);
+    if (inputToday.length == 1) {
+      setToday(0 + inputToday);
+    }
+    if (inputMonth.length == 1) {
+      setMonth(0 + inputMonth);
+    }
     if (
       inputToday == "" ||
       inputToday == null ||
@@ -77,8 +83,10 @@ const Date_wrapper = ({ onRemove }: Props) => {
     } else if (
       1 > inputToday ||
       inputToday > monthLength[month - 1] ||
+      inputToday.length > 2 ||
       1 > inputMonth ||
       inputMonth > 12 ||
+      inputMonth.length > 2 ||
       0 > inputYear ||
       inputYear > year
     ) {
@@ -86,10 +94,14 @@ const Date_wrapper = ({ onRemove }: Props) => {
       setLivedMonths(0);
       setLivedYears(0);
       setError(true);
-      if (1 > inputToday || inputToday > monthLength[month - 1]) {
+      if (
+        1 > inputToday ||
+        inputToday > monthLength[month - 1] ||
+        inputToday.length > 2
+      ) {
         setErrorDD(2);
       }
-      if (1 > inputMonth || inputMonth > 12) {
+      if (1 > inputMonth || inputMonth > 12 || inputMonth.length > 2) {
         setErrorMM(2);
       }
       if (0 > inputYear || inputYear > year) {

@@ -33,7 +33,11 @@ function App() {
       </header>
       <footer className="attribution">
         Coded by
-        <a href="https://github.com/MrFauli/AgeCalculatorApp"> Gianluca</a>.
+        <a href="https://github.com/MrFauli/AgeCalculatorApp-React">
+          {" "}
+          Gianluca
+        </a>
+        .
       </footer>
     </div>
   );
