@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import logo from "./logo.svg";
-import "./App.css";
+import "./App.scss";
 import Input from "./Components/Input/Input";
 import Button from "./Components/Button/Button";
 import Date_wrapper from "./Components/Date_wrapper/Date_wrapper";
@@ -44,3 +44,5 @@ function App() {
 }
 
 export default App;
+// max 2
+// 0 hinzfügen
